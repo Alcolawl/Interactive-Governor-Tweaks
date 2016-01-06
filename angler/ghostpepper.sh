@@ -81,6 +81,10 @@ echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 #Disable TouchBoost
 echo Disabling TouchBoost
 echo 0 > /sys/module/msm_performance/parameters/touchboost
+#Disable Core Control and Enable Thermal Throttling allowing for longer sustained performance
+echo Disabling Aggressive CPU Thermal Throttling
+echo 0 > /sys/module/msm_thermal/core_control/enabled
+echo Y > /sys/module/msm_thermal/parameters/enabled
 echo ----------------------------------------------------
 echo Settings Successfully Applied! You may now tweak them further in ElementalX Kernel Manager
 echo ----------------------------------------------------
