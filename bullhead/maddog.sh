@@ -1,5 +1,5 @@
 echo ----------------------------------------------------
-echo Applying MadDog Interactive Governor Settings
+echo Applying 'MadDog' Interactive Governor Settings
 echo ----------------------------------------------------
 
 echo Applying settings to LITTLE cluster
@@ -57,7 +57,5 @@ echo 0:0 1:0 2:0 3:0 4:0 5:0 > /sys/module/cpu_boost/parameters/input_boost_freq
 echo 0 > /sys/module/cpu_boost/parameters/boost_ms
 echo 0 > /sys/module/cpu_boost/parameters/input_boost_ms
 echo ----------------------------------------------------
-echo Settings Successfully Applied! You may now tweak them further in ElementalX Kernel Manager or Kernel Adiutor
+echo Settings Successfully Applied! You may now tweak them further in ElementalX Kernel Manager
 echo ----------------------------------------------------
-
-
