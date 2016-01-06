@@ -1,11 +1,12 @@
 echo ----------------------------------------------------
-echo Applying SilverFish V2 Interactive Governor Settings
+echo Applying 'SilverFish' v2.0 Interactive Governor Settings
 echo ----------------------------------------------------
 
 echo Applying settings to LITTLE cluster
 chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 echo interactive > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo 1 > /sys/devices/system/cpu/cpu1/online
 chmod 644 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
 echo interactive > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
@@ -27,17 +28,17 @@ echo 100000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
 echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
 
 echo Applying settings to Big cluster
+echo 1 > /sys/devices/system/cpu/cpu4/online
 chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 echo interactive > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+echo 1 > /sys/devices/system/cpu/cpu5/online
 chmod 644 /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
 echo interactive > /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
-echo 1 > /sys/devices/system/cpu/cpu5/online
 chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 echo 384000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-echo 1 > /sys/devices/system/cpu/cpu1/online
 chmod 644 /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq
 echo 384000 > /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq
 chmod 444 /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq
@@ -55,7 +56,5 @@ echo 0:672000 1:672000 2:672000 3:672000 4:0 5:0 > /sys/module/cpu_boost/paramet
 echo 0 > /sys/module/cpu_boost/parameters/boost_ms
 echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 echo ----------------------------------------------------
-echo Settings Successfully Applied! You may now tweak them further in ElementalX Kernel Manager or Kernel Adiutor
+echo Settings Successfully Applied! You may now tweak them further in ElementalX Kernel Manager
 echo ----------------------------------------------------
-
-
