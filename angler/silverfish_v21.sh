@@ -1,6 +1,6 @@
 #Script created by Alcolawl - 1/06/2016 - Please give credit when using this in your work!
 echo ----------------------------------------------------
-echo Applying 'GhostPepper' Interactive Governor Settings
+echo Applying 'SilverFish' v2.1 Interactive Governor Settings
 echo ----------------------------------------------------
 
 #Apply settings to LITTLE cluster
@@ -10,13 +10,13 @@ chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 echo interactive > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 #Tweak Interactive Governor
-echo 95 460800:20 600000:35 672000:52 768000:66 864000:79 960000:92 1248000:96 1344000:98 1478400:99 1555200:100 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
+echo 95 460800:62 600000:80 672000:95 768000:50 864000:54 960000:60 1248000:78 1478000:98 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
 echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
-echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
-echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
+echo 10000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
+echo 10000 672000:80000 768000:10000 1248000:40000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
 echo 200 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
-echo 60000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
+echo 100000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
 echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
 echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration
 
@@ -32,13 +32,13 @@ chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 echo 384000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq			#Core 4 Minimum Frequency = 384MHz
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
-echo 24 480000:16 633600:29 768000:40 864000:52 960000:63 1248000:71 1344000:80 1440000:88 1536000:94 1632000:97 1728000:98 1824000:99 1948000:100 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
+echo 26 480000:34 633600:42 768000:47 864000:52 960000:68 1248000:73 1344000:78 1440000:84 1536000:89 1632000:92 1728000:95 1824000:98 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
 echo 384000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
-echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
-echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
+echo 30000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
+echo 0 633600:30000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
 echo 200 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
-echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
+echo 30000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
 echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
 echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration
 

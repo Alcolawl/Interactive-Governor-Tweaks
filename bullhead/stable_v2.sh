@@ -9,18 +9,6 @@ echo Applying settings to LITTLE cluster
 chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 echo interactive > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-echo 1 > /sys/devices/system/cpu/cpu1/online								#Online Core 1
-chmod 644 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
-echo interactive > /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
-chmod 444 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
-echo 1 > /sys/devices/system/cpu/cpu2/online								#Online Core 2
-chmod 644 /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
-echo interactive > /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
-chmod 444 /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor
-echo 1 > /sys/devices/system/cpu/cpu3/online								#Online Core 3
-chmod 644 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
-echo interactive > /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
-chmod 444 /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor
 #Tweak Interactive Governor
 echo 75 460000:69 600000:80 672000:76 787000:81 864000:81 960000:69 1248000:78 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
@@ -39,17 +27,10 @@ echo 1 > /sys/devices/system/cpu/cpu4/online								#Online Core 4
 chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 echo interactive > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-echo 1 > /sys/devices/system/cpu/cpu5/online								#Online Core 5
-chmod 644 /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
-echo interactive > /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
-chmod 444 /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
 #Temporarily change permissions to governor files for the Big cluster to lower minimum frequency to 384MHz
 chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 echo 384000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq			#Core 4 Minimum Frequency = 384MHz
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-chmod 644 /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq
-echo 384000 > /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq			#Core 5 Minimum Frequency = 384MHz
-chmod 444 /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
 echo 72 480000:68 633000:74 768000:80 864000:81 960000:69 1248000:83 1344000:84 1440000:84 1536000:84 1632000:86 1689000:83 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo 80000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
