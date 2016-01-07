@@ -27,29 +27,10 @@ echo 1 > /sys/devices/system/cpu/cpu4/online								#Online Core 4
 chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 echo interactive > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-echo 1 > /sys/devices/system/cpu/cpu5/online								#Online Core 5
-chmod 644 /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
-echo interactive > /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
-chmod 444 /sys/devices/system/cpu/cpu5/cpufreq/scaling_governor
-chmod 644 /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-echo interactive > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-chmod 444 /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-chmod 644 /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor
-echo interactive > /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor
-chmod 444 /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor
 #Temporarily change permissions to governor files for the Big cluster to lower minimum frequency to 384MHz
 chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 echo 384000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq			#Core 4 Minimum Frequency = 384MHz
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-chmod 644 /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq
-echo 384000 > /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq			#Core 5 Minimum Frequency = 384MHz
-chmod 444 /sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq
-chmod 644 /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
-echo 384000 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq			#Core 6 Minimum Frequency = 384MHz
-chmod 444 /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
-chmod 644 /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq
-echo 384000 > /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq			#Core 7 Minimum Frequency = 384MHz
-chmod 444 /sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
 echo 26 480000:34 633600:42 768000:47 864000:52 960000:68 1248000:73 1344000:78 1440000:84 1536000:89 1632000:92 1728000:95 1824000:98 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
