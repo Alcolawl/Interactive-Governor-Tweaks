@@ -34,7 +34,7 @@ chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
 echo 31 768000:43 864000:56 960000:79 1248000:76 1344000:85 1440000:92 1536000:95 1632000:98 1689600:99 1824000:100 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
-echo 636000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
+echo 633000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
 echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
 echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
 echo 200 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
