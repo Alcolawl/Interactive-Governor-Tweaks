@@ -9,7 +9,7 @@ echo Applying settings to LITTLE cluster
 chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 echo interactive > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-#Temporarily change permissions to governor files for the Big cluster to lower minimum frequency to 633MHz
+#Temporarily change permissions to governor files for the Big cluster to lower minimum frequency to 384MHz
 chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq			#Core 0-3 Minimum Frequency = 384MHz			
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
