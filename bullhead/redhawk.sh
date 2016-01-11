@@ -3,7 +3,6 @@ echo ----------------------------------------------------
 echo Applying 'RedHawk' IntelliActive Governor Settings
 echo ----------------------------------------------------
 
-#Experimental Settings Meshing Interactive and IntelliActive together.
 #For Phasma(5X) and Kylo(6P) Kernels only!
 
 #Apply settings to LITTLE cluster
@@ -20,7 +19,7 @@ echo 20000 > /sys/devices/system/cpu/cpufreq/intelliactive/timer_rate
 echo 20000 460800:10000 > /sys/devices/system/cpu/cpufreq/intelliactive/above_hispeed_delay
 echo 200 > /sys/devices/system/cpu/cpufreq/intelliactive/go_hispeed_load
 echo 60000 > /sys/devices/system/cpu/cpufreq/intelliactive/min_sample_time
-echo 960000 > /sys/devices/system/cpu/cpufreq/intelliactive/up_threshold_any_cpu_freq
+echo 864000 > /sys/devices/system/cpu/cpufreq/intelliactive/up_threshold_any_cpu_freq
 echo 787000 > /sys/devices/system/cpu/cpufreq/intelliactive/sync_freq
 echo 90 > /sys/devices/system/cpu/cpufreq/intelliactive/up_threshold_any_cpu_load
 
@@ -33,12 +32,12 @@ echo interactive > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 #Temporarily change permissions to governor files for the Big cluster to lower minimum frequency to 633MHz
 chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
-echo 636000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq			#Core 4 Minimum Frequency = 633MHz			
+echo 633600 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq			#Core 4 Minimum Frequency = 633MHz			
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
 echo 31 768000:43 864000:56 960000:79 1248000:76 1344000:85 1440000:92 1536000:95 1632000:98 1689600:99 1824000:100 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
-echo 636000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
+echo 633600 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
 echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
 echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
 echo 200 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
