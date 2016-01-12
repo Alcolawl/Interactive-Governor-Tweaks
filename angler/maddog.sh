@@ -1,4 +1,11 @@
-#Script created by Alcolawl - 1/07/2016 - Please give credit when using this in your work!
+#Author: Alcolawl
+#Settings By: SoniCron
+#Device: Nexus 6P (Angler)
+#Codename: MadDog
+#Build Status: Stable
+#Version: 1.0
+#Last Updated: 1/07/2016
+#Notes: Please give credit when using this in your work!
 echo ----------------------------------------------------
 echo Applying 'MadDog' Interactive Governor Settings
 echo ----------------------------------------------------
