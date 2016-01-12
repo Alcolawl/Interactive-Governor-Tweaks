@@ -1,4 +1,11 @@
-#Script created by Alcolawl - 1/06/2016 - Please give credit when using this in your work!
+#Author: Alcolawl
+#Settings By: SoniCron
+#Device: Nexus 6P (Angler)
+#Codename: SilverFish
+#Build Status: Final
+#Version: 2.1
+#Last Updated: 1/06/2016
+#Notes: Please give credit when using this in your work!
 echo ----------------------------------------------------
 echo Applying 'SilverFish' v2.1 Interactive Governor Settings
 echo ----------------------------------------------------

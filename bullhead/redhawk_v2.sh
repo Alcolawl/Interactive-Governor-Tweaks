@@ -1,4 +1,11 @@
-#Script created by Alcolawl - 1/11/2016 - Please give credit when using this in your work!
+#Author: Alcolawl
+#Settings By: Alcolawl & SoniCron
+#Device: Nexus 5X (Bullhead)
+#Codename: RedHawk
+#Build Status: Beta
+#Version: 2.0
+#Last Updated: 1/11/2016
+#Notes: Please give credit when using this in your work! - For Kernels with the IntelliActive governor only!
 echo ----------------------------------------------------
 echo Applying 'RedHawk' v2.0 IntelliActive Governor Settings
 echo ----------------------------------------------------

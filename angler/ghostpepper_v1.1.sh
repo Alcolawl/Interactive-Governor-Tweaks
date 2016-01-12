@@ -1,4 +1,11 @@
-#Script created by Alcolawl - 1/11/2016 - Please give credit when using this in your work!
+#Author: Alcolawl
+#Settings By: SoniCron
+#Device: Nexus 6P (Angler)
+#Codename: GhostPepper
+#Build Status: Beta
+#Version: 1.1
+#Last Updated: 1/11/2016
+#Notes: Please give credit when using this in your work!
 echo ----------------------------------------------------
 echo Applying 'GhostPepper' v1.1 Interactive Governor Settings
 echo ----------------------------------------------------
