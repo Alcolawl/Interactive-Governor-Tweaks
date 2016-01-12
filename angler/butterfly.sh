@@ -1,4 +1,4 @@
-#Script created by Alcolawl - 1/10/2016 - Please give credit when using this in your work!
+#Script created by Alcolawl - 1/11/2016 - Please give credit when using this in your work!
 echo ----------------------------------------------------
 echo Applying 'ButterFly' Interactive Governor Settings
 echo ----------------------------------------------------
@@ -14,7 +14,7 @@ chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq			#Core 0-3 Minimum Frequency = 384MHz			
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
-echo 70 460800:58 600000:82 672000:72 787200:92 864000:83 960000:99 1248000:75 1440000:70 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
+echo 70 460800:58 600000:82 672000:72 787200:92 864000:83 960000:99 1248000:75 1478000:70 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
 echo 1440000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
 echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
