@@ -1,4 +1,4 @@
-#Script created by Alcolawl - 1/10/2016 - Please give credit when using this in your work!
+#Script created by Alcolawl - 1/11/2016 - Please give credit when using this in your work!
 echo ----------------------------------------------------
 echo Applying 'GhostPepper' v1.1 Interactive Governor Settings
 echo ----------------------------------------------------
@@ -10,7 +10,7 @@ chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 echo interactive > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 #Tweak Interactive Governor
-echo 15 460800:25 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:98 1440000:99 1555200:100 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
+echo 15 460800:25 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:98 1478000:100  > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
 echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
 echo 10000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
@@ -32,7 +32,7 @@ chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 echo 633600 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq		#Core 4 Minimum Frequency = 633MHz
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
-echo 31 768000:43 864000:56 960000:79 1248000:76 1344000:85 1440000:92 1536000:95 1632000:97 1689600:98 1824000:99 1948000:100 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
+echo 31 768000:43 864000:56 960000:79 1248000:76 1344000:85 1440000:92 1536000:95 1632000:98 1689600:99 1824000:100 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
 echo 633600 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
 echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
