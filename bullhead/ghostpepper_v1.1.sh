@@ -1,8 +1,7 @@
-#Script created by Alcolawl - 1/09/2016 - Please give credit when using this in your work!
+#Script created by Alcolawl - 1/10/2016 - Please give credit when using this in your work!
 echo ----------------------------------------------------
 echo Applying 'GhostPepper' v1.1 Interactive Governor Settings
 echo ----------------------------------------------------
-#Special Thanks to Smultie for the settings! 
 
 #Apply settings to LITTLE cluster
 echo Applying settings to LITTLE cluster
