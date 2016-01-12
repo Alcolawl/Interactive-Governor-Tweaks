@@ -1,6 +1,6 @@
-#Script created by Alcolawl - 1/06/2016 - Please give credit when using this in your work!
+#Script created by Alcolawl - 1/11/2016 - Please give credit when using this in your work!
 echo ----------------------------------------------------
-echo Applying 'RedHawk' IntelliActive Governor Settings
+echo Applying 'RedHawk' v2.0 IntelliActive Governor Settings
 echo ----------------------------------------------------
 
 #For Phasma(5X) and Kylo(6P) Kernels only!
@@ -15,10 +15,11 @@ chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 echo 15 460800:25 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:98 1440000:100 > /sys/devices/system/cpu/cpufreq/intelliactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpufreq/intelliactive/timer_slack
 echo 384000 > /sys/devices/system/cpu/cpufreq/intelliactive/hispeed_freq
-echo 20000 > /sys/devices/system/cpu/cpufreq/intelliactive/timer_rate
+echo 10000 > /sys/devices/system/cpu/cpufreq/intelliactive/timer_rate
 echo 20000 460800:10000 > /sys/devices/system/cpu/cpufreq/intelliactive/above_hispeed_delay
 echo 200 > /sys/devices/system/cpu/cpufreq/intelliactive/go_hispeed_load
 echo 60000 > /sys/devices/system/cpu/cpufreq/intelliactive/min_sample_time
+echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
 echo 864000 > /sys/devices/system/cpu/cpufreq/intelliactive/up_threshold_any_cpu_freq
 echo 787000 > /sys/devices/system/cpu/cpufreq/intelliactive/sync_freq
 echo 90 > /sys/devices/system/cpu/cpufreq/intelliactive/up_threshold_any_cpu_load
@@ -37,12 +38,12 @@ chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
 echo 31 768000:43 864000:56 960000:79 1248000:76 1344000:85 1440000:92 1536000:95 1632000:98 1689600:99 1824000:100 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
-echo 633600 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
-echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
-echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
-echo 200 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
-echo 40000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
-echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
+echo 1344000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
+echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
+echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
+echo 90 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
+echo 60000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
+echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
 
 #Enable Input Boost for LITTLE cluster @672MHz for 40ms
 echo Enabling Input Boost at 672MHz for the LITTLE cluster
