@@ -28,7 +28,7 @@ echo 200 > /sys/devices/system/cpu/cpufreq/intelliactive/go_hispeed_load
 echo 60000 > /sys/devices/system/cpu/cpufreq/intelliactive/min_sample_time
 echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
 echo 960000 > /sys/devices/system/cpu/cpufreq/intelliactive/up_threshold_any_cpu_freq
-echo 787000 > /sys/devices/system/cpu/cpufreq/intelliactive/sync_freq
+echo 787200 > /sys/devices/system/cpu/cpufreq/intelliactive/sync_freq
 echo 90 > /sys/devices/system/cpu/cpufreq/intelliactive/up_threshold_any_cpu_load
 
 #Apply settings to Big cluster
