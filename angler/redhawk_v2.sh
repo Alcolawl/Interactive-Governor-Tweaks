@@ -1,7 +1,7 @@
 #Author: Alcolawl
 #Settings By: Alcolawl & SoniCron
 #Device: Nexus 6P (Angler)
-#Codename: MadDog
+#Codename: RedHawk
 #Build Status: Beta
 #Version: 2.0
 #Last Updated: 1/11/2016
@@ -28,7 +28,7 @@ echo 200 > /sys/devices/system/cpu/cpufreq/intelliactive/go_hispeed_load
 echo 60000 > /sys/devices/system/cpu/cpufreq/intelliactive/min_sample_time
 echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
 echo 960000 > /sys/devices/system/cpu/cpufreq/intelliactive/up_threshold_any_cpu_freq
-echo 787000 > /sys/devices/system/cpu/cpufreq/intelliactive/sync_freq
+echo 787200 > /sys/devices/system/cpu/cpufreq/intelliactive/sync_freq
 echo 90 > /sys/devices/system/cpu/cpufreq/intelliactive/up_threshold_any_cpu_load
 
 #Apply settings to Big cluster
@@ -43,7 +43,7 @@ chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 echo 633600 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq			#Core 4 Minimum Frequency = 633MHz
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
-echo 31 768000:43 864000:56 960000:79 1248000:76 1344000:85 1440000:92 1536000:95 1632000:98 1689600:99 1824000:100 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
+echo 31 768000:43 864000:56 960000:79 1248000:76 1344000:85 1440000:92 1536000:95 1632000:98 1728000:99 1824000:100 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
 echo 1344000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
 echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate

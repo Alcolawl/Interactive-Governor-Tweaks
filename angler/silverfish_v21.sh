@@ -17,7 +17,7 @@ chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 echo interactive > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 #Tweak Interactive Governor
-echo 95 460800:62 600000:80 672000:95 768000:50 864000:54 960000:60 1248000:78 1478000:98 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
+echo 95 460800:62 600000:80 672000:95 768000:50 864000:54 960000:60 1248000:78 1478400:98 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
 echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
 echo 10000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
