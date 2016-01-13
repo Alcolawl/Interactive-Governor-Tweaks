@@ -1,7 +1,7 @@
 #Author: Alcolawl
 #Settings By: SoniCron
 #Device: Nexus 6P (Angler)
-#Codename: MadDog
+#Codename: ButterFly
 #Build Status: Alpha
 #Version: 0.1
 #Last Updated: 1/11/2016
@@ -21,7 +21,7 @@ chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq			#Core 0-3 Minimum Frequency = 384MHz			
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
-echo 70 460800:58 600000:82 672000:72 787200:92 864000:83 960000:99 1248000:75 1478000:70 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
+echo 70 460800:58 600000:82 672000:72 787200:92 864000:83 960000:99 1248000:75 1478400:70 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
 echo 1440000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
 echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
@@ -42,7 +42,7 @@ chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 echo 633600 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq			#Core 4 Minimum Frequency = 633MHz			
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
-echo 74 768000:73 864000:64 960000:80 1248000:61 1344000:69 1440000:64 1536000:74 1632000:69 1689600:67 1824000:72 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
+echo 74 768000:73 864000:64 960000:80 1248000:61 1344000:69 1440000:64 1536000:74 1632000:69 1728000:67 1824000:72 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
 echo 1824000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
 echo 20000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
