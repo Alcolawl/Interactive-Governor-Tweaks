@@ -1,0 +1,29 @@
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads 95 460800:62 600000:80 672000:95 768000:50 864000:54 960000:60 1248000:78 1478400:98
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack -1
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 384000
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay 10000 672000:80000 768000:10000 1248000:40000
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 200
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 100000
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis 0
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/boost 0
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/align_windows 0
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif 1
+/sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 0
+/sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
+/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 384000
+/sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads 26 480000:34 633600:42 768000:47 864000:52 960000:68 1248000:73 1344000:78 1440000:84 1536000:89 1632000:92 1728000:95 1824000:98
+/sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack -1
+/sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 384000
+/sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 30000
+/sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay 0 633600:30000
+/sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 200
+/sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 30000
+/sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis 0
+/sys/module/cpu_boost/parameters/input_boost_freq 0:672000 1:672000 2:672000 3:672000 4:0 5:0 6:0 7:0
+/sys/module/cpu_boost/parameters/boost_ms 0
+/sys/module/cpu_boost/parameters/input_boost_ms 40
+/sys/module/msm_performance/parameters/touchboost 0
+/sys/module/msm_thermal/core_control/enabled 0
+/sys/module/msm_thermal/parameters/enabled Y
