@@ -51,6 +51,7 @@ echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration
 
 #Enable Input Boost for LITTLE cluster @672MHz for 40ms
 echo Enabling Input Boost at 672MHz for the LITTLE cluster
+echo 1 > /sys/module/cpu_boost/parameters/input_boost_enabled
 echo 0:672000 1:672000 2:672000 3:672000 4:0 5:0 6:0 7:0 > /sys/module/cpu_boost/parameters/input_boost_freq
 echo 0 > /sys/module/cpu_boost/parameters/boost_ms
 echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
