@@ -21,6 +21,7 @@
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 200
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis 0
+/sys/module/cpu_boost/parameters/input_boost_enabled 1
 /sys/module/cpu_boost/parameters/input_boost_freq 0:672000 1:672000 2:672000 3:672000 4:0 5:0
 /sys/module/cpu_boost/parameters/boost_ms 0
 /sys/module/cpu_boost/parameters/input_boost_ms 40
