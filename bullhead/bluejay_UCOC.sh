@@ -3,12 +3,11 @@
 #Device: Nexus 5X (Bullhead)
 #Codename: BlueJay
 #Build Status: Stable
-#Version: 1.1
-#Last Updated: 5/6/2016
+#Version: 1.11
+#Last Updated: 5/9/2016
 #Notes: Please give credit when using this in your work! - For Kernels with the Impulse governor only!
-sleep 40
 echo ----------------------------------------------------
-echo Applying 'BlueJay' v1.1 Impulse Governor Settings
+echo Applying 'BlueJay' v1.11 Impulse Governor Settings
 echo ----------------------------------------------------
 
 #For Kernels with the Impulse governor ONLY! 
@@ -21,10 +20,10 @@ echo impulse > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 #Temporarily change permissions to governor files for the LITTLE cluster to lower minimum frequency to 302.4MHz
 chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq			#Core 0 Minimum Frequency = 302.4MHz			
+echo 302400 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq			#Core 0 Minimum Frequency = 302.4MHz			
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-#Tweak impulse Governor
-echo 15 460800:25 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:98 1440000:100 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/target_loads
+#Tweak impulse Governor with UC/OC support
+echo 15 384000:20 460800:25 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:97 1440000:98 1536000:100 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/target_loads
 echo -1 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/timer_slack
 echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/hispeed_freq
 echo 10000 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/timer_rate
@@ -45,7 +44,7 @@ chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 echo 633600 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq			#Core 4 Minimum Frequency = 633.6MHz			
 chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
-echo 98 633600:65 768000:78 864000:85 960000:95 1248000:60 1344000:65 1440000:70 1536000:75 1632000:80 1689000:85 1824000:95 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
+echo 98 633600:65 768000:78 864000:85 960000:95 1248000:60 1344000:65 1440000:70 1536000:75 1632000:80 1689000:85 1824000:90 1958400:95 2016000:100 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
 echo 960000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
 echo 30000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
