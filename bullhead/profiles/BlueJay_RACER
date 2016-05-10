@@ -1,12 +1,13 @@
 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor impulse
 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 302400
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq 1536000
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/go_hispeed_load 95
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/above_hispeed_delay 33300 1248000:40000
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/timer_rate 10000
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/hispeed_freq 960000
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/timer_slack -1
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/go_lowspeed_load 7
-/sys/devices/system/cpu/cpu0/cpufreq/impulse/target_loads 15 384000:20 460800:25 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:97 1440000:98 1536000:100
+/sys/devices/system/cpu/cpu0/cpufreq/impulse/target_loads 15 384000:20 460800:25 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:95 1440000:87 1536000:100
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/min_sample_time 50000
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/boost 0
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/align_windows 0
@@ -15,6 +16,7 @@
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/max_freq_hysteresis 0
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/boostpulse_duration 80000
 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 633600
+/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq 2016000
 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor interactive
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 60
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay 0
