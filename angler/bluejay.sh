@@ -2,15 +2,15 @@
 #Settings By: Alcolawl
 #Device: Nexus 6P (Angler)
 #Codename: BlueJay
-#Build Status: Beta
-#Version: 1.0
-#Last Updated: 3/31/2016
+#Build Status: Stable
+#Version: 1.1
+#Last Updated: 5/10/2016
 #Notes: Please give credit when using this in your work! - For Kernels with the impulse governor only!
 echo ----------------------------------------------------
-echo Applying 'BlueJay' v1.0 Impulse Governor Settings
+echo Applying 'BlueJay' v1.1 Impulse Governor Settings
 echo ----------------------------------------------------
 
-#For Dirty Unicorns ROM / Unicorn Blood Kernel or Elite Kernel ONLY!
+#For Dirty Unicorns ROM / Kylo Kernel or Elite Kernel ONLY!
 
 #Apply settings to LITTLE cluster
 echo Applying settings to LITTLE cluster
@@ -42,10 +42,10 @@ chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 #Tweak Interactive Governor
 echo 98 633600:65 768000:78 864000:85 960000:95 1248000:60 1344000:65 1440000:70 1536000:75 1632000:80 1728000:85 1824000:95 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
 echo -1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
-echo 633600 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
+echo 960000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
 echo 30000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
 echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay
-echo 200 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
+echo 90 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
 echo 60000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
 echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
 
@@ -53,6 +53,9 @@ echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
 echo Setting CPUquiet to Userspace
 echo userspace > /sys/devices/system/cpu/cpuquiet/current_governor
 
+#Disable Input Boost
+echo Disabling Input Boost
+echo 0 > /sys/module/cpu_boost/parameters/input_boost_enabled
 #Disable TouchBoost
 echo Disabling TouchBoost
 echo 0 > /sys/module/msm_performance/parameters/touchboost
