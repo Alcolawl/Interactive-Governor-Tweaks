@@ -20,8 +20,8 @@ echo intelliactive > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 #Temporarily change permissions to governor files for the LITTLE cluster to set min/max frequency to 302.4/1536 MHz
 chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
-echo 302400 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq			#Core 1 Minimum Frequency = 302.4MHz		
-echo 1536000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq		#Core 1 Maximum Frequency = 1536MHz		
+echo 302400 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq			#Core 0 Minimum Frequency = 302.4MHz		
+echo 1536000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq		#Core 0 Maximum Frequency = 1536MHz		
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 #Tweak IntelliActive Governor
 echo 15 384000:20 460800:25 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:97 1440000:98 1536000:100 > /sys/devices/system/cpu/cpufreq/intelliactive/target_loads
