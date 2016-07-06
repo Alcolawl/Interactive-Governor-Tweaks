@@ -2,15 +2,15 @@
 #Settings By: Alcolawl & SoniCron
 #Device: Nexus 6P (Angler)
 #Codename: RedHawk
-#Build Status: Beta
+#Build Status: Stable
 #Version: 3.0
-#Last Updated: 2/18/2016
+#Last Updated: 5/13/2016
 #Notes: Please give credit when using this in your work!
 echo ----------------------------------------------------
 echo Applying 'RedHawk' v3.0 IntelliActive Governor Settings
 echo ----------------------------------------------------
 
-#For Phasma(5X) and Kylo(6P) Kernels only!
+#For Dirty Unicorns ROM or kernels with the IntelliActive Governor ONLY
 
 #Apply settings to LITTLE cluster
 echo Applying settings to LITTLE cluster
