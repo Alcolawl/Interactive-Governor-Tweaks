@@ -3,12 +3,13 @@
 #Device: Nexus 5X (Bullhead)
 #Codename: BlueJay
 #Build Status: Stable
-#Version: 1.11
-#Last Updated: 5/9/2016
+#Version: 1.12
+#Last Updated: 6/14/2016
 #Notes: Please give credit when using this in your work! - For Kernels with the Impulse governor only!
 echo ----------------------------------------------------
 echo Applying 'BlueJay' v1.11 Impulse Governor Settings
 echo ----------------------------------------------------
+echo Recommeneded for use with Thermal Throttling Tweaks by Razorless
 
 #For Kernels with the Impulse governor ONLY! 
 
@@ -23,7 +24,7 @@ chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 echo 302400 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq			#Core 0 Minimum Frequency = 302.4MHz			
 chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 #Tweak impulse Governor with UC/OC support
-echo 15 384000:20 460800:25 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:98 1440000:100 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/target_loads
+echo 15 384000:20 460800:30 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:98 1440000:100 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/target_loads
 echo -1 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/timer_slack
 echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/hispeed_freq
 echo 10000 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/timer_rate
@@ -53,16 +54,12 @@ echo 60 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
 echo 60000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
 echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis
 
-#Tune CPUquiet Driver
-echo Setting CPUquiet to Userspace
-echo userspace > /sys/devices/system/cpu/cpuquiet/current_governor
-
 #Disable TouchBoost
 echo Disabling TouchBoost
 echo 0 > /sys/module/msm_performance/parameters/touchboost
-#Disable Core Control and Thermal Throttling allowing for longer sustained performance
+#Enable Core Control and Disable MSM Thermal Throttling allowing for longer sustained performance
 echo Disabling Aggressive CPU Thermal Throttling
-echo 0 > /sys/module/msm_thermal/core_control/enabled
+echo 1 > /sys/module/msm_thermal/core_control/enabled
 echo N > /sys/module/msm_thermal/parameters/enabled
 echo ----------------------------------------------------
 echo Settings Successfully Applied! You may now tweak them further in ElementalX Kernel Manager or Kernel Adiutor
