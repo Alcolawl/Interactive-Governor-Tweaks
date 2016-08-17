@@ -1,12 +1,12 @@
 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor impulse
-/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 384000
+/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 302400
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/go_hispeed_load 95
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/above_hispeed_delay 33300 1248000:40000
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/timer_rate 10000
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/hispeed_freq 960000
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/timer_slack -1
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/go_lowspeed_load 7
-/sys/devices/system/cpu/cpu0/cpufreq/impulse/target_loads 15 460800:25 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:98 1440000:100
+/sys/devices/system/cpu/cpu0/cpufreq/impulse/target_loads 15 384000:20 460800:25 600000:43 672000:65 787200:78 864000:92 960000:95 1248000:98 1440000:100
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/min_sample_time 50000
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/boost 0
 /sys/devices/system/cpu/cpu0/cpufreq/impulse/align_windows 0
@@ -29,4 +29,3 @@
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/max_freq_hysteresis 0
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration 0
 /sys/module/msm_performance/parameters/touchboost 0
-/sys/module/cpu_boost/parameters/input_boost_enabled 0
