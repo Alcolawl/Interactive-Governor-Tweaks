@@ -19,10 +19,10 @@
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load 90
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/above_hispeed_delay 0
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate 20000
-/sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1824000
+/sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq 1440000
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack -1
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads 74 768000:73 864000:64 960000:80 1248000:61 1344000:69 1440000:64 1536000:74 1632000:69 1689600:67 1824000:72
-/sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 60000
+/sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 30000
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/ignore_hispeed_on_notif 0
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/boost 0
 /sys/devices/system/cpu/cpu4/cpufreq/interactive/fast_ramp_down 0
