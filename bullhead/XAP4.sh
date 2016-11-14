@@ -93,7 +93,7 @@ echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 echo Disabling TouchBoost
 echo 0 > /sys/module/msm_performance/parameters/touchboost
 #Disable BCL
-echo Disabling BCL and Removing Perfd
+echo Disabling BCL
 echo disable > /sys/devices/soc.0/qcom,bcl.67/mode
 #Enable Core Control and Disable MSM Thermal Throttling allowing for longer sustained performance
 echo Disabling Aggressive CPU Thermal Throttling
