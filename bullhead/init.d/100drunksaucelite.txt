@@ -3,22 +3,22 @@
 #Settings By: Alcolawl & NYCHitman1
 #Asynchronous Execution By: LazerL0rd
 #Device: Nexus 5X (Bullhead)
-#Codename: DrunkSauce
+#Codename: DrunkSauce Lite
 #Build Status: Stable
-#Version: 1.2
-#Last Updated: 2/1/2017
+#Version: 1.0
+#Last Updated: 12/6/2016
 #Notes: Please give credit when using this in your work!
 (
 	sleep 90
 	echo ----------------------------------------------------
-	echo Applying 'DrunkSauce' v1.2 Impluse and Interactive Governor Settings
+	echo Applying 'DrunkSauce Lite' v1.0 Interactive Governor Settings
 	echo ----------------------------------------------------
 
 	#Apply settings to LITTLE cluster
 	echo Applying settings to LITTLE cluster
-	#Temporarily change permissions to governor files for the LITTLE cluster to enable Impulse governor
+	#Temporarily change permissions to governor files for the LITTLE cluster to enable interactive governor
 	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-	echo impulse > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+	echo interactive > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 	chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 	#Temporarily change permissions to governor files for the LITTLE cluster to lower the minimum frequency to 302MHz if possible
 	chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
@@ -33,30 +33,30 @@
 		chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 		echo 1632000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq		#Core 0 Maximum Frequency = 1632MHz			
 		chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-		echo 80 384000:33 460800:25 600000:50 672000:65 787200:70 864000:85 960000:90 1248000:92 1632000:100 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/target_loads #Set overclock max frequency compatible target_loads
+		echo 80 384000:33 460800:25 600000:50 672000:65 787200:70 864000:85 960000:90 1248000:92 1632000:100 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads #Set overclock max frequency compatible target_loads
 	elif test $lilmaxfreq -eq 1440000; then
 		#Temporarily change permissions to governor files for the LITTLE cluster to set the maximum frequency to 1440MHz
 		echo No LITTLE Cluster Overclocking detected. Applying appropriate values.
 		chmod 644 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 		echo 1440000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq		#Core 0 Maximum Frequency = 1440MHz			
 		chmod 444 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-		echo 80 384000:33 460800:25 600000:50 672000:65 787200:70 864000:85 960000:90 1248000:92 1440000:98 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/target_loads #Set normal max frequency target_loads
+		echo 80 384000:33 460800:25 600000:50 672000:65 787200:70 864000:85 960000:90 1248000:92 1440000:98 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads #Set normal max frequency target_loads
 	fi
 
-	#Tweak Impulse Governor
-	echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/go_hispeed_load
-	echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/above_hispeed_delay
-	echo 40000 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/timer_rate
-	echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/hispeed_freq
-	echo -1 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/timer_slack
-	echo 50000 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/min_sample_time
-	echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/powersave_bias
-	echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/align_windows
-	echo 166667 > /sys/devices/system/cpu/cpu0/cpufreq/impulse/max_freq_hysteresis
+	#Tweak Interactive Governor
+	echo 85 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
+	echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
+	echo 40000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
+	echo 960000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
+	echo -1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
+	echo 50000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
+	echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/powersave_bias
+	echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/align_windows
+	echo 166667 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/max_freq_hysteresis
 
 	#Apply settings to Big cluster
 	echo Applying settings to Big cluster
-	#Temporarily change permissions to governor files for the Big cluster to enable Interactive governor
+	#Temporarily change permissions to governor files for the Big cluster to enable interactive governor
 	echo 1 > /sys/devices/system/cpu/cpu4/online								#Online Core 4
 	chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 	echo interactive > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
@@ -74,14 +74,14 @@
 		chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
 		echo 2016000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq		#Core 4 Maximum Frequency = 2016MHz			
 		chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-		echo 74 768000:73 864000:64 960000:80 1248000:61 1344000:69 1440000:64 1536000:74 1632000:69 1689600:67 1824000:72 1958400:85 2016000:100 > /sys/devices/system/cpu/cpu4/cpufreq/ironactive/target_loads #Set overclock max frequency compatible target_loads
+		echo 74 768000:73 864000:64 960000:80 1248000:61 1344000:69 1440000:64 1536000:74 1632000:69 1689600:67 1824000:72 1958400:85 2016000:100 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads #Set overclock max frequency compatible target_loads
 	elif test $maxfreq -eq 1824000; then
 		#Temporarily change permissions to governor files for the Big cluster to set the maximum frequency to 1824MHz
 		echo No Big Cluster Overclocking detected. Applying appropriate values.
 		chmod 644 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
 		echo 1824000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq		#Core 4 Maximum Frequency = 1824MHz			
 		chmod 444 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
-		echo 74 768000:73 864000:64 960000:80 1248000:61 1344000:69 1440000:64 1536000:74 1632000:69 1689600:67 1824000:72 > /sys/devices/system/cpu/cpu4/cpufreq/ironactive/target_loads #Set normal max frequency target_loads
+		echo 74 768000:73 864000:64 960000:80 1248000:61 1344000:69 1440000:64 1536000:74 1632000:69 1689600:67 1824000:72 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads #Set normal max frequency target_loads
 	fi
 
 	#Tweak interactive Governor
